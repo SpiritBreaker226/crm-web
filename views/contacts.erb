@@ -5,6 +5,16 @@
 	<title>Contacts</title>
 </head>
 <body>
-	Contacts
+	<h1>All Contacts</h1>
+
+	<ul>
+	<% @contacts.each do |contact| %>
+		<li>
+			<%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)
+			<br>
+			<%= contact.note %>
+		</li>
+	<% end %>
+	</ul>
 </body>
 </html>
