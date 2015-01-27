@@ -1,6 +1,7 @@
 require_relative "./contact.rb"
 
 class Rolodex
+	attr_reader :contacts
 	@@index = 1001
 
 	def initialize
