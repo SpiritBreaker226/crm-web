@@ -3,6 +3,16 @@ body {
 	padding: 0;
 }
 
+a {
+	color: #7b097d;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #58105a;
+	text-decoration: underline;
+}
+
 .clear {
 	clear: both;
 }
@@ -50,13 +60,11 @@ body {
 
 .main-header-menu a {
 	color: #FFF;
-	text-decoration: none;
 	text-transform: capitalize;
 }
 
 .main-header-menu a:hover {
 	color: #dadde1;
-	text-decoration: underline;
 }
 
 main {
