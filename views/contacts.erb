@@ -1,22 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Contacts</title>
-</head>
-<body>
-	<h1>All Contacts</h1>
+<ul>
+<% $rolodex.contacts.each do |contact| %>
+	<li>
+		<%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)
+		<br>
+		<%= contact.note %>
+	</li>
+<% end %>
+</ul>
 
-	<ul>
-	<% $rolodex.contacts.each do |contact| %>
-		<li>
-			<%= contact.first_name %> <%= contact.last_name %> (<%= contact.email %>)
-			<br>
-			<%= contact.note %>
-		</li>
-	<% end %>
-	</ul>
-
-	<a href="/">Main menu</a> | <a href="/contacts/new">Add contacts</a>
-</body>
-</html>
+<a href="/">Main menu</a> | <a href="/contacts/new">Add contacts</a>
