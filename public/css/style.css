@@ -27,3 +27,26 @@ body {
 .main-header-title {
 	width: 20%;
 }
+
+.main-header-menu {
+	margin-top: 10px;
+	width: 80%;
+	text-align: right;
+}
+
+.main-header-menu ul li {
+	list-style-type: none;
+	margin: 0;
+	padding-right: 25px;
+	display: inline-table;
+}
+
+.main-header-menu a {
+	color: #FFF;
+	text-decoration: none;
+}
+
+.main-header-menu a:hover {
+	color: #dadde1;
+	text-decoration: underline;
+}
