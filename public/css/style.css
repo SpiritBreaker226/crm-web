@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/*
+
+	Layout
+
+*/
+
+.main-header {
+	background-color: #7b097d;
+	color: #FFF;
+	padding: 0 15px;
+}
+
+.main-header-title,
+.main-header-menu {
+	float: left;
+}
+
+.main-header-title {
+	width: 20%;
+}

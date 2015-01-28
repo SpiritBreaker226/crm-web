@@ -7,24 +7,26 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-	<header>
-		<h1><%= @title %></h1>
+	<header class="main-header">
+		<h1 class="main-header-title"><%= @title %></h1>
 
-		<nav>
-			<h2>Main Menu</h2>
+		<nav class="main-header-menu">
+			<h2 hidden>Main Menu</h2>
 			<ul>
 				<li><a href="/">Main menu</a></li>
 				<li><a href="/contacts">View all contacts</a></li>
 				<li><a href="/contacts/new">Add contacts</a></li>
 			</ul>
 		</nav>
+
+		<div class="clear"></div>
 	</header>
 
 	<main>
 		<%= yield %>
 	</main>
 
-	<footer>
+	<footer class="main-footer">
 		<label>Bitmaker Labs &copy; 2015</label>
 	</footer>
 </body>
