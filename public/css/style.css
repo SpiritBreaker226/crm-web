@@ -13,10 +13,14 @@ body {
 
 */
 
-.main-header {
+.main-header-fooder {
+	padding: 0 15px;
 	background-color: #7b097d;
 	color: #FFF;
-	padding: 0 15px;
+}
+
+.main-footer {
+	padding: 25px 15px;
 }
 
 .main-header-title,
@@ -50,3 +54,4 @@ body {
 	color: #dadde1;
 	text-decoration: underline;
 }
+
