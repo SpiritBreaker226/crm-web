@@ -68,3 +68,15 @@ main {
 	margin-top: 0;
 	color: #7b097d;
 }
+
+/*
+
+	Add Contacts
+
+*/
+
+.contact-details {
+	margin: 0 0 15px;
+	border-bottom: 1px solid #7b097d;
+	padding: 10px 0 15px 10px;
+}
