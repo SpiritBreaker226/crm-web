@@ -13,14 +13,17 @@ body {
 
 */
 
-.main-header-fooder {
-	padding: 0 15px;
+.main-header-footer {
 	background-color: #7b097d;
 	color: #FFF;
 }
 
-.main-footer {
+.header-footer-main-tags {
 	padding: 25px 15px;
+}
+
+.main-header {
+	padding: 0 15px;
 }
 
 .main-header-title,
@@ -55,3 +58,7 @@ body {
 	text-decoration: underline;
 }
 
+main {
+	margin: 0 auto;
+	width: 58%;
+}
