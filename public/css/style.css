@@ -4,12 +4,12 @@ body {
 }
 
 a {
-	color: #7b097d;
+	color: #FFF;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #58105a;
+	color: #dadde1;
 	text-decoration: underline;
 }
 
@@ -59,12 +59,7 @@ a:hover {
 }
 
 .main-header-menu a {
-	color: #FFF;
 	text-transform: capitalize;
-}
-
-.main-header-menu a:hover {
-	color: #dadde1;
 }
 
 main {
@@ -84,11 +79,21 @@ main {
 */
 
 .contact-details {
-	margin: 0 0 15px;
+	border-right: 1px solid #7b097d;
+	border-left: 1px solid #7b097d;
 	border-bottom: 1px solid #7b097d;
-	padding: 10px 0 15px 10px;
+	margin: 0 7% 25px 0;
+	padding-bottom: 15px;
+	float: left;
 }
 
-.contact-details-last {
-	border: 0;
+.contact-details header {
+	background-color: #7b097d;
+	color: #FFF;
+	padding: 10px 15px;
+	margin-bottom: 10px;
+}
+
+.contact-note {
+	padding: 0 15px;
 }

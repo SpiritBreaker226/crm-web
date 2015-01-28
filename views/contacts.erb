@@ -1,8 +1,12 @@
 <% $rolodex.contacts.each_with_index do |contact, index| %>
-	<article class="contact-details <%= index == $rolodex.contacts.count - 1 ? "contact-details-last" : "" %>">
-		<%= contact.first_name %> <%= contact.last_name %> (<a href="<%= contact.email %>" title="<%= contact.first_name %> <%= contact.last_name %>'s email"><%= contact.email %></a>)
-		<br><br>
-		Notes<br>
-		<%= contact.note %>
+	<article class="contact-details<%= index == $rolodex.contacts.count - 1 ? " contact-details-last" : "" %>">
+		<header>
+			<%= contact.first_name %> <%= contact.last_name %> (<a href="<%= contact.email %>" title="<%= contact.first_name %> <%= contact.last_name %>'s email"><%= contact.email %></a>)
+		</header>
+		<div class="contact-note">
+			<%= contact.note %>
+		</div>
 	</article>
+	<div class="<%= index % 3 == 2 ? "clear" : "hidden" %>"></div>
 <% end %>
+<div class="clear"></div>
