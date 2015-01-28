@@ -51,6 +51,7 @@ body {
 .main-header-menu a {
 	color: #FFF;
 	text-decoration: none;
+	text-transform: capitalize;
 }
 
 .main-header-menu a:hover {
