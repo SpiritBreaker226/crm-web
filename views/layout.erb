@@ -8,7 +8,7 @@
 </head>
 <body>
 	<header class="main-header main-header-footer header-footer-main-tags">
-		<h1 class="main-header-title"><%= @title %></h1>
+		<h1 class="main-header-title">CMS</h1>
 
 		<nav class="main-header-menu">
 			<h2 hidden>Main Menu</h2>
@@ -23,7 +23,11 @@
 	</header>
 
 	<main class="header-footer-main-tags">
-		<%= yield %>
+		<section>
+			<h2><%= @title %></h2>
+
+			<%= yield %>
+		</section>
 	</main>
 
 	<footer class="main-footer main-header-footer header-footer-main-tags">
