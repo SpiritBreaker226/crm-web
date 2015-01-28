@@ -88,3 +88,7 @@ main {
 	border-bottom: 1px solid #7b097d;
 	padding: 10px 0 15px 10px;
 }
+
+.contact-details-last {
+	border: 0;
+}
