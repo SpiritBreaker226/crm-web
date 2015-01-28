@@ -63,3 +63,8 @@ main {
 	margin: 0 auto;
 	width: 58%;
 }
+
+.section-title {
+	margin-top: 0;
+	color: #7b097d;
+}
