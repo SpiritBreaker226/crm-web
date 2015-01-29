@@ -26,9 +26,13 @@ end
 
 get "/contacts/:id" do
 	@contact = @@rolodex.search_contact(params[:id].to_i)
-	@title = "Contact Details"
 
-	erb :show_contact
+	if @contact
+		@title += "Contact Details For #{@contact.first_name} #{@contact.last_name}"
+		erb :show_contact
+	else
+		raise Sinatra::NotFound
+	end
 end
 
 post "/contacts" do
