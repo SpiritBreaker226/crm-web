@@ -15,14 +15,14 @@ class Rolodex
 	end
 
 	def modify_contact(contact_id, modify_attribute, modify_value)
-		found_contact = search_contact(contact_id)
+		found_contact = display_particular_contact(contact_id)
 
 		unless found_contact == nil
 			case modify_attribute.to_i
-			when 1 then found_contact[0].first_name = modify_value
-			when 2 then found_contact[0].last_name = modify_value
-			when 3 then found_contact[0].email = modify_value
-			when 4 then found_contact[0].note = modify_value
+			when 1 then found_contact.first_name = modify_value
+			when 2 then found_contact.last_name = modify_value
+			when 3 then found_contact.email = modify_value
+			when 4 then found_contact.note = modify_value
 			else
 				return nil
 			end
@@ -34,13 +34,13 @@ class Rolodex
 	end
 
 	def delete_contact(contact_id)
-		found_contact = search_contact(contact_id)
+		found_contact = display_particular_contact(contact_id)
 
 		return nil if found_contact.empty?
 
 		@contacts.delete_if { |contact| contact.id.to_i == contact_id.to_i }
 
-		found_contact[0]
+		found_contact
 	end
 
 	def display_all_contacts
