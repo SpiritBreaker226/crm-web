@@ -15,7 +15,7 @@ class Rolodex
 	end
 
 	def modify_contact(contact_id, modify_attribute, modify_value)
-		found_contact = display_particular_contact(contact_id)
+		found_contact = search_contact(contact_id)
 
 		unless found_contact == nil
 			case modify_attribute.to_i
@@ -34,7 +34,7 @@ class Rolodex
 	end
 
 	def delete_contact(contact_id)
-		found_contact = display_particular_contact(contact_id)
+		found_contact = search_contact(contact_id)
 
 		return nil if found_contact.empty?
 
@@ -67,13 +67,9 @@ class Rolodex
 		display_contacts_by_attribute.empty? ? nil : display_contacts_by_attribute
 	end
 
-	def display_particular_contact(contact_id)
-		found_contact = search_contact(contact_id)
-
-		found_contact.empty? ? nil : found_contact[0]
-	end
-
 	def search_contact(contact_id)
-		@contacts.find_all { |contact| contact.id.to_i == contact_id.to_i }
+		@contacts.find { |contact| contact.id.to_i == contact_id.to_i }
+		
+		found_contact.empty? ? nil : found_contact[0]
 	end
 end
