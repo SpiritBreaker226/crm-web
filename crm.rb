@@ -24,10 +24,10 @@ get "/contacts/new" do
 	erb :new_contact
 end
 
-get "/contacts/1001" do
-	@contact = @@rolodex.search_contact(1001)
+get "/contacts/:id" do
+	@contact = @@rolodex.search_contact(params[:id].to_i)
 	@title = "Contact Details"
-	
+
 	erb :show_contact
 end
 
