@@ -24,6 +24,13 @@ get "/contacts/new" do
 	erb :new_contact
 end
 
+get "/contacts/1001" do
+	@contact = @@rolodex.search_contact(1001)
+	@title = "Contact Details"
+	
+	erb :show_contact
+end
+
 post "/contacts" do
 	# for testing do not add when adding code to actully projects
 	puts params
