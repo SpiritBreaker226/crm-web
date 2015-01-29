@@ -45,6 +45,16 @@ get "/contacts/:id/edit" do
 	end
 end
 
+delete "/contacts/:id" do
+	@contact = @@rolodex.delete_contact(params[:id].to_i)
+
+	if @contact
+		redirect to("/contacts")
+	else
+		raise Sinatra::NotFound
+	end
+end
+
 post "/contacts" do
 	# for testing do not add when adding code to actully projects
 	puts params
