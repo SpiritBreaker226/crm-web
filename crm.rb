@@ -3,7 +3,6 @@ require_relative "./contact"
 
 require "sinatra"
 
-$rolodex = Rolodex.new
 @@rolodex = Rolodex.new
 
 # Temporary fake data so that we always find contact with id 1000.

@@ -1,5 +1,5 @@
-<% $rolodex.contacts.each_with_index do |contact, index| %>
-	<article class="contact-details<%= index == $rolodex.contacts.count - 1 ? " contact-details-last" : "" %>">
+<% @@rolodex.contacts.each_with_index do |contact, index| %>
+	<article class="contact-details<%= index == @@rolodex.contacts.count - 1 ? " contact-details-last" : "" %>">
 		<header>
 			<%= contact.first_name %> <%= contact.last_name %> (<a href="<%= contact.email %>" title="<%= contact.first_name %> <%= contact.last_name %>'s email"><%= contact.email %></a>)
 		</header>
