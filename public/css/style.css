@@ -17,13 +17,22 @@ a:hover {
 	clear: both;
 }
 
+.btn {
+	font-size: 20px;
+	padding: 10px 0;
+	margin-right: 14px;
+	border: 0;
+	border-radius: 13px;
+	width: 48%;
+}
+
 /*
 
 	Layout
 
 */
 
-.main-header-footer {
+.main-header-footer, .btn {
 	background-color: #7b097d;
 	color: #FFF;
 }
@@ -37,7 +46,8 @@ a:hover {
 }
 
 .main-header-title,
-.main-header-menu {
+.main-header-menu,
+.btn-details {
 	float: left;
 }
 

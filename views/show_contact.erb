@@ -2,8 +2,9 @@
 <p><strong>Email:</strong> <%= @contact.email %></p>
 <p><strong>Note:</strong></p>
 <p><%= @contact.note %></p>
-<button type="button" onclick="window.location.href = '/contacts/<%= @contact.id %>/edit';">Edit</button>
+<button type="button" class="btn btn-details" onclick="window.location.href = '/contacts/<%= @contact.id %>/edit';">Edit</button>
 <form action="/contacts/<%= @contact.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
-	<input type="submit" name="delete_contact" value="Delete Contact">
+	<button type="submit" class="btn btn-details">Delete Contact</button>
 </form>
+<div class="clear"></div>
