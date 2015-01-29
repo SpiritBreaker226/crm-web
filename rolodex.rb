@@ -69,7 +69,5 @@ class Rolodex
 
 	def search_contact(contact_id)
 		@contacts.find { |contact| contact.id.to_i == contact_id.to_i }
-		
-		found_contact.empty? ? nil : found_contact[0]
 	end
 end
