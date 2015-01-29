@@ -36,11 +36,7 @@ class Rolodex
 	def delete_contact(contact_id)
 		found_contact = search_contact(contact_id)
 
-		return nil if found_contact.empty?
-
-		@contacts.delete_if { |contact| contact.id.to_i == contact_id.to_i }
-
-		found_contact
+		@contacts.delete(found_contact)
 	end
 
 	def display_all_contacts
