@@ -1,0 +1,17 @@
+<form action="/contacts/<%= @contact.id %>" method="post">
+	<label for="contact-frist-name">First Name</label>
+	<input type="text" id="contact-frist-name" name="first_name" placeholder="e.g. John" value="<%= @contact.first_name %>">
+	<br><br>
+	<label for="contact-last-name">Last Name</label>
+	<input type="text"  id="contact-last-name" name="last_name" placeholder="e.g. Smith" value="<%= @contact.last_name %>">
+	<br><br>
+	<label for="contact-email">Email</label>
+	<input type="email" id="contact-email" name="email" placeholder="e.g. username@domain.io" value="<%= @contact.email %>">
+	<br><br>
+	<label for="contact-note">Note</label>
+	<br><br>
+	<textarea id="contact-note" name="note" placeholder="Enter a note about this contact"><%= @contact.note %></textarea>
+	<br><br>
+	<input type="hidden" name="_method" value="put">
+	<input type="submit" name="Submit">
+</form>
