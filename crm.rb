@@ -62,7 +62,7 @@ get "/contacts/:id" do
 end
 
 get "/contacts/:id/edit" do
-	@contact = @@rolodex.search_contact(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 
 	if @contact
 		@title = "Edit Contact For #{@contact.first_name} #{@contact.last_name}"
@@ -92,13 +92,14 @@ post "/contacts" do
 end
 
 put "/contacts/:id" do
-	@contact = @@rolodex.search_contact(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 
 	if @contact
 		@contact.first_name = params[:first_name]
 		@contact.last_name = params[:last_name]
 		@contact.email = params[:email]
 		@contact.note = params[:note]
+		@contact.save
 
 		redirect to("/contacts")
 	else
