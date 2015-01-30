@@ -13,6 +13,19 @@ a:hover {
 	text-decoration: underline;
 }
 
+textarea {
+	width: 393px;
+	height: 80px;
+	font-size: 16px;
+}
+
+input {
+	width: 200px;
+	margin-left: 16px;
+	height: 40px;
+	font-size: 16px;
+}
+
 .clear {
 	clear: both;
 }
