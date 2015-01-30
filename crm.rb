@@ -84,8 +84,8 @@ post "/contacts" do
 	# for testing do not add when adding code to actully projects
 	puts params
 
-	new_contact = Contact.new(params[:first_name], params[:last_name], params[:email], params[:note])
-	@@rolodex.add_contact(new_contact)
+	new_contact = Contact.new(params)
+	new_contact.save
 	redirect to("/contacts")
 end
 
