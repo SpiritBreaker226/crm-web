@@ -10,7 +10,12 @@
 	<header class="main-header main-header-footer header-footer-main-tags">
 		<h1 class="main-header-title"><a href="/">CMS</a></h1>
 
-		<nav class="main-header-menu">
+		<form action="/contacts/search_result" method="get" class="search-banner-forum main-header-search-menu">
+			<label for="contact-search-box">Search</label>
+			<input type="text" id="contact-search-box" name="search-box" placeholder="Search For Name, Email &amp; Notes" class="search-banner">
+		</form>
+
+		<nav class="main-header-menu main-header-search-menu">
 			<h2 hidden>Main Menu</h2>
 			<ul>
 				<li><a href="/">Homepage</a></li>
