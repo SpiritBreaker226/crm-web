@@ -39,6 +39,8 @@ get "/" do
 end
 
 get "/contacts" do
+	@contacts = Contact.all;
+
 	@title = "All Contacts"
 	erb :contacts
 end
@@ -49,7 +51,7 @@ get "/contacts/new" do
 end
 
 get "/contacts/:id" do
-	@contact = @@rolodex.search_contact(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 
 	if @contact
 		@title = "Contact Details For #{@contact.first_name} #{@contact.last_name}"
