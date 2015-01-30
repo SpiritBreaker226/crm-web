@@ -24,6 +24,9 @@ class Contact
 	# end
 end
 
+DataMapper.finalize
+DataMapper.auto_upgrade!
+
 # end of datamapper setup
 
 @@rolodex = Rolodex.new
