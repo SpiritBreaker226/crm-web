@@ -1,5 +1,3 @@
-require_relative "./rolodex"
-
 require "sinatra"
 require "data_mapper"
 
@@ -28,8 +26,6 @@ DataMapper.finalize
 DataMapper.auto_upgrade!
 
 # end of datamapper setup
-
-@@rolodex = Rolodex.new
 
 # begin sinatra routes
 
