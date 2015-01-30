@@ -1,11 +1,16 @@
 <form action="/contacts" method="post">
-	<input type="text" name="first_name" placeholder="First Name">
+	<label for="contact-frist-name">First Name</label>
+	<input type="text" id="contact-frist-name" name="first_name" placeholder="e.g. John">
 	<br><br>
-	<input type="text" name="last_name" placeholder="Last Name">
+	<label for="contact-last-name">Last Name</label>
+	<input type="text"  id="contact-last-name" name="last_name" placeholder="e.g. Smith">
 	<br><br>
-	<input type="text" name="email" placeholder="Email">
+	<label for="contact-email">Email</label>
+	<input type="email" id="contact-email" name="email" placeholder="e.g. username@domain.io">
 	<br><br>
-	<textarea name="note" placeholder="Note"></textarea>
+	<label for="contact-note">Note</label>
+	<br>
+	<textarea id="contact-note" name="note" placeholder="Enter a note about this contact"></textarea>
 	<br><br>
 	<button type="submit" class="btn">Add Contact</button>
 </form>
