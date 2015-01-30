@@ -1,0 +1,3 @@
+# Ignore the default SQLite Database
+/*.sqlite3
+/*.sqlite3-journal
