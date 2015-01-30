@@ -73,9 +73,11 @@ get "/contacts/:id/edit" do
 end
 
 delete "/contacts/:id" do
-	@contact = @@rolodex.delete_contact(params[:id].to_i)
+	@contact = Contact.get(params[:id].to_i)
 
 	if @contact
+		@contact.destroy
+
 		redirect to("/contacts")
 	else
 		raise Sinatra::NotFound
