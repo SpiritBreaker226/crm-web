@@ -46,6 +46,27 @@ get "/contacts/new" do
 	erb :new_contact
 end
 
+get "/contacts/search_result" do
+	@title = "Search Results for #{params[:search]}"
+	@queries = params[:search].split(" ").map { |query| query = "%#{query}%" }
+
+	@contacts = @queries.map do |query| 
+		Contact.all({
+			conditions: [
+				"first_name LIKE ? OR last_name LIKE ? OR email LIKE ? OR note LIKE ?",
+				query,
+				query,
+				query,
+				query
+			]
+	})
+	end
+
+	@contacts.flatten!.compact!
+
+	erb :contacts
+end
+
 get "/contacts/:id" do
 	@contact = Contact.get(params[:id].to_i)
 
