@@ -62,7 +62,10 @@ get "/contacts/search_result" do
 	})
 	end
 
-	@contacts.flatten!.compact!
+	if @contacts.count > 0
+		@contacts.flatten!.compact!
+		@contacts.uniq!
+	end
 
 	erb :contacts
 end
